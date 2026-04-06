@@ -1,17 +1,16 @@
 package com.fintech.finance.dtos;
 
-import java.time.LocalDate;
-
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class TransactionsDetailDto {
 
 	private Long id;
-    private LocalDate transactionDate;
+    private String transactionDate;
     private String description;
     private String amount;
     private String category;
-    private String name;
     private Long transactionsSummaryId;
 }

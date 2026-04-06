@@ -69,9 +69,6 @@ public class TransactionsDetail implements Serializable {
     @Column(name="category", nullable=false)
     private String category;
     
-    @Column(name="name", nullable=false)
-    private String name;
-    
     @ManyToOne
 	@NotAudited
     @JoinColumn(name="transactions_summary", nullable=false)

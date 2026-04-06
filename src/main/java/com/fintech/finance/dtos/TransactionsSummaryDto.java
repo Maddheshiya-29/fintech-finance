@@ -1,8 +1,12 @@
 package com.fintech.finance.dtos;
 
+import java.util.List;
+
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class TransactionsSummaryDto {
 
 	private Long id;
@@ -13,4 +17,8 @@ public class TransactionsSummaryDto {
 	private String netBalance;
 	private String name;
 	private Long userId;
+	
+	private String totalExpense;
+	private String totalIncome;
+	private List<TransactionsDetailDto> transactionDetailDtos;
 }

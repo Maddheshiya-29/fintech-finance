@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.fintech.finance.entities.User;
 import com.fintech.finance.repositories.UserRepository;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import lombok.RequiredArgsConstructor;
 
@@ -31,7 +32,9 @@ public class CustomUserDetailsService implements UserDetailsService {
                 true,
                 true,
                 true,
-                Collections.singleton(() -> user.getRole().name())
+                Collections.singleton(
+                	    new SimpleGrantedAuthority("ROLE_" + user.getRole().name())
+                	)
         );
     }
 }

@@ -68,10 +68,6 @@ public class TransactionsSummary implements Serializable {
 	@Column(name="amount", nullable=true)
 	private BigDecimal amount = new BigDecimal(0.00);
 	
-	@Digits(integer=8, fraction=2)
-	@Column(name="net_balance", nullable=true)
-	private BigDecimal netBalance = new BigDecimal(0.00);
-	
 	@Column(name="name", nullable=false)
 	private String name;
 	
